@@ -134,30 +134,45 @@ body {
 
 .badge svg { width: 13px; height: 13px; fill: var(--text-accent); flex-shrink: 0; }
 
+/* ── CONTENT CARD ──────────────────────────── */
+.content-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 340px;
+  background: rgba(255,255,255,.18);
+  border: 1px solid rgba(255,255,255,.55);
+  border-radius: 22px;
+  padding: 1.6rem 1.4rem 1.4rem;
+  margin-bottom: .85rem;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.60),
+    0 4px 24px rgba(119,33,48,.08);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
 /* ── HEADLINE ──────────────────────────────── */
 .hero h1 {
-  font-family: 'Poetsen One', var(--font-h);
-  font-size: clamp(2.4rem, 10vw, 3.2rem);
-  font-weight: 400;
-  line-height: 1.15;
+  font-family: var(--font-h);
+  font-size: clamp(1.3rem, 5.5vw, 1.65rem);
+  font-weight: 700;
+  line-height: 1.25;
   letter-spacing: .01em;
   text-transform: uppercase;
   color: var(--text-accent);
-  margin-bottom: .8rem;
+  margin-bottom: .75rem;
 }
-
-.hero h1 .achadinhos { display: block; }
-.hero h1 em { display: block; font-style: normal; }
-.hero h1 .todo-dia { display: block; }
 
 /* ── SUBTITLE ──────────────────────────────── */
 .subtitle {
-  font-size: .94rem;
+  font-size: .92rem;
   color: var(--text-normal);
-  line-height: 1.7;
-  max-width: 300px;
-  margin-bottom: 1.65rem;
-  opacity: .80;
+  line-height: 1.65;
+  max-width: 280px;
+  margin-bottom: 1.25rem;
+  opacity: .85;
 }
 
 /* ── BOTÃO WHATSAPP ────────────────────────── */
@@ -177,7 +192,7 @@ body {
   border-radius: 999px;
   padding: 1rem 1.75rem;
   width: 100%;
-  max-width: 320px;
+  max-width: 100%;
   box-shadow:
     0 6px 22px rgba(37,211,102,.35),
     0 0 0 0 rgba(37,211,102,.45);
@@ -232,11 +247,11 @@ body {
   gap: .9rem;
   background: #5d221a;
   border: 1px solid rgba(254,209,133,.50);
-  border-radius: 16px;
-  padding: .9rem 2rem;
+  border-radius: 12px;
+  padding: .55rem 1.4rem;
   width: 100%;
   max-width: 320px;
-  margin-top: 1.1rem;
+  margin-top: 1rem;
   box-shadow:
     inset 0 1px 0 rgba(254,209,133,.18),
     0 4px 20px rgba(119,33,48,.12);
@@ -281,8 +296,7 @@ body {
 ──────────────────────────────────────────── */
 @media (min-width: 480px) {
   .hero { padding: 2.5rem 2.5rem 3rem; }
-  .hero h1 { font-size: 2.9rem; }
-  .subtitle { max-width: 340px; }
-  .btn-wa { max-width: 340px; }
+  .hero h1 { font-size: 1.75rem; }
+  .content-card { max-width: 380px; }
   .urgency { max-width: 340px; }
 }
